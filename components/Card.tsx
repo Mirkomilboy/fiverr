@@ -45,10 +45,10 @@ const Card = ({ id, card }: props) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className={`${next.toString()} absolute top-1/2 transition-all duration-500 group-hover:right-4 -right-full -translate-y-1/2 z-40 flex items-center justify-center border border-brand-gray-light bg-white w-8 h-8 rounded-full`}>
+        <button className={`${next.toString()} btn absolute top-1/2 transition-all duration-500 group-hover:right-4 -right-full -translate-y-1/2 z-40 flex items-center justify-center border border-brand-gray-light bg-white w-8 h-8 rounded-full`}>
           <svg width="12" height="12" viewBox="0 0 8 16" xmlns="http://www.w3.org/2000/svg" fill="currentFill"><path d="m.772 1.19-.619.62a.375.375 0 0 0 0 .53L5.8 8 .153 13.66a.375.375 0 0 0 0 .53l.62.62a.375.375 0 0 0 .53 0l6.544-6.545a.375.375 0 0 0 0-.53L1.302 1.19a.375.375 0 0 0-.53 0Z"></path></svg>
         </button>
-        <button className={`${prev.toString()} absolute top-1/2 transition-all duration-500 group-hover:left-4 -left-full -translate-y-1/2 z-40 flex items-center justify-center border border-brand-gray-light bg-white w-8 h-8 rounded-full`}>
+        <button className={`${prev.toString()} btn absolute top-1/2 transition-all duration-500 group-hover:left-4 -left-full -translate-y-1/2 z-40 flex items-center justify-center border border-brand-gray-light bg-white w-8 h-8 rounded-full`}>
           <svg width="12" height="12" viewBox="0 0 8 15" xmlns="http://www.w3.org/2000/svg" fill="currentFill"><path d="m7.228.69.619.62a.375.375 0 0 1 0 .53L2.2 7.5l5.647 5.66a.375.375 0 0 1 0 .53l-.62.62a.375.375 0 0 1-.53 0L.154 7.764a.375.375 0 0 1 0-.53L6.698.69a.375.375 0 0 1 .53 0Z"></path></svg>
         </button>
       </div>
