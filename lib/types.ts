@@ -21,3 +21,14 @@ export interface cardI {
   videoLink: string | null,
   imgLink: string | null
 }
+
+export type statusType = 'one' | 'two' | 'three' | 'pro' | 'new' | 'choose'
+export interface cardDataI {
+  name: string,
+  imgUrl: string,
+  status: statusType,
+  text: string,
+  rating: string,
+  totalJob: string,
+  fromPrice: string
+}
