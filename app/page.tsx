@@ -7,13 +7,13 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      {/* <main>
         <HeadSection />
         <SelectType />
         <FilterSection />
         <FilterResults />
         <Resault />
-      </main>
+      </main> */}
     </>
   );
 }
