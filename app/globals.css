@@ -6,6 +6,10 @@ body {
   @apply text-brand-black font-helvetica;
 }
 
+.swiper-button-disabled {
+  @apply opacity-0
+}
+
 @font-face {
   font-family: "Helvetica Neue";
   src: url("../public/font/HelveticaNeue-Black.woff2") format("woff2"),

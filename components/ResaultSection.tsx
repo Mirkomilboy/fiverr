@@ -35,7 +35,7 @@ export const Resault = () => {
           <Card card={item} id={idx} key={idx} />
         ))}
       </div>
-      <div className="flex justify-center gap-4 mt-4">
+      <div className="flex justify-center gap-4 mt-20">
         <button
           onClick={handlePreviousPage}
           disabled={currentPage === 1}
