@@ -6,7 +6,8 @@ body {
   @apply text-brand-black font-helvetica;
 }
 
-.swiper-button-disabled {
+.next.swiper-button-disabled,
+.prev.swiper-button-disabled {
   @apply opacity-0
 }
 
