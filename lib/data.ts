@@ -237,4 +237,58 @@ export const CardsData: cardDataI[] = [
     totalJob: "48",
     fromPrice: "25"
   },
+    {
+    name: "Bilal Farooq",
+    imgUrl: "/cardImg-1.jpeg",
+    status: 'one',
+    text: "I will make animation using after effects",
+    rating: "4.8",
+    totalJob: "3",
+    fromPrice: "25"
+  },
+  {
+    name: "Mridul Khurana",
+    imgUrl: "/cardImg-1.jpeg",
+    status: 'two',
+    text: "I will do professional video editing for youtube and corporate",
+    rating: "5",
+    totalJob: "14",
+    fromPrice: "25"
+  },
+    {
+    name: "Prithviraj P",
+    imgUrl: "/cardImg-1.jpeg",
+    status: 'pro',
+    text: "I will make animation using after effects",
+    rating: "3.8",
+    totalJob: "248",
+    fromPrice: "25"
+  },
+  {
+    name: "Steve",
+    imgUrl: "/cardImg-1.jpeg",
+    status: 'new',
+    text: "I will do professional youtube video editing in adobe premiere pro",
+    rating: "4",
+    totalJob: "1k+",
+    fromPrice: "25"
+  },
+    {
+    name: "Hilol",
+    imgUrl: "/cardImg-1.jpeg",
+    status: 'three',
+    text: "I will make animation using after effects",
+    rating: "4.8",
+    totalJob: "321",
+    fromPrice: "25"
+  },
+  {
+    name: "Xoja Jack",
+    imgUrl: "/cardImg-1.jpeg",
+    status: 'pro',
+    text: "I will edit your gaming youtube video to perfection",
+    rating: "4.8",
+    totalJob: "48",
+    fromPrice: "25"
+  },
 ]
