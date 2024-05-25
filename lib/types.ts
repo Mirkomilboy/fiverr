@@ -15,3 +15,9 @@ export interface TypeRadioI {
     subname: string
   }[]
 }
+
+export interface cardI {
+  like: boolean,
+  videoLink: string | null,
+  imgLink: string | null
+}

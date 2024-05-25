@@ -1,4 +1,4 @@
-import { TypeI, TypeRadioI } from "./types"
+import { TypeI, TypeRadioI, cardI } from "./types"
 
 export const typesBtn = [
   {
@@ -158,3 +158,26 @@ export const TimeRadios: TypeRadioI = {
     }
   ]
 }
+
+export const CardSlider: cardI[] = [
+  {
+    like: true,
+    videoLink: "./cardVideo-1.mp4",
+    imgLink: null
+  },
+  {
+    like: false,
+    videoLink: null,
+    imgLink: "/cardImg-1.jpeg"
+  },
+  {
+    like: true,
+    videoLink: "./cardVideo-1.mp4",
+    imgLink: null
+  },
+  {
+    like: false,
+    videoLink: null,
+    imgLink: "/cardImg-1.jpeg"
+  },
+]

@@ -6,7 +6,7 @@ export const Resault = () => {
     <section className='max-w-8xl mx-auto px-4 lg:px-8 my-4'>
       <div className='grid items-stretch md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
         {[...Array(10)].map((item, idx) => (
-          <Card key={idx} />
+          <Card id={idx} key={idx} />
         ))}
       </div>
     </section>
