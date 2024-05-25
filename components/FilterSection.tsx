@@ -31,8 +31,8 @@ export const FilterSection = () => {
   return (
     <section ref={headerRef} className={`sticky top-0 bg-white w-full z-50 ${shadow ? ' shadow-md' : ''}`}>
       <div className='max-w-8xl mx-auto mt-6 py-3 px-4 lg:px-8'>
-        <div className='flex items-center justify-between'>
-          <div className='flex items-center gap-3'>
+        <div className='flex flex-wrap gap-4 items-center justify-between'>
+          <div className='flex flex-wrap items-center gap-3'>
             <Menu>
               {({ open }) => (
                 <>

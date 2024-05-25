@@ -30,7 +30,7 @@ export const Resault = () => {
   };
   return (
     <section className='max-w-8xl mx-auto px-4 lg:px-8 my-4'>
-      <div className='grid items-stretch md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
+      <div className='grid items-stretch grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
         {currentItems.map((item, idx) => (
           <Card card={item} id={idx} key={idx} />
         ))}

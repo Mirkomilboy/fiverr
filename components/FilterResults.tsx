@@ -5,8 +5,8 @@ import React from 'react'
 const FilterResults = () => {
   return (
     <section className='max-w-8xl mx-auto px-4 lg:px-8'>
-      <div className='flex items-center justify-between mt-5'>
-        <div className='flex items-center gap-1 text-brand-slate-200'>
+      <div className='flex flex-wrap items-center justify-between mt-5'>
+        <div className='flex flex-wrap items-center gap-1 text-brand-slate-200'>
           <p>64,000+ Results</p>
           <span className='block mx-1 w-1 h-1 rounded-full bg-brand-slate-200'></span>
           <p>Showing prices for:</p>
