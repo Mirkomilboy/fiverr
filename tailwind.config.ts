@@ -22,6 +22,9 @@ const config: Config = {
           slate: {
             100: "#f5f5f5",
             200: "#c5c5c6"
+          },
+          green: {
+            DEFAULT: "#1dbf73"
           }
         },
       },
