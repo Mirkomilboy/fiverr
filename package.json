@@ -10,15 +10,19 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.0.3",
+    "i": "^0.3.7",
     "next": "14.2.3",
+    "npm": "^10.8.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-onclickoutside": "^6.13.1",
     "swiper": "^11.1.3"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-onclickoutside": "^6.7.10",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",

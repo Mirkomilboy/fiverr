@@ -17,15 +17,15 @@ const config: Config = {
             DEFAULT: "#404145",
             100: "#222325",
             200: "#dadbdd",
-            300: "#62646a"
+            300: "#62646a",
           },
           slate: {
             100: "#f5f5f5",
-            200: "#c5c5c6"
+            200: "#c5c5c6",
           },
           green: {
-            DEFAULT: "#1dbf73"
-          }
+            DEFAULT: "#1dbf73",
+          },
         },
       },
       maxWidth: {
@@ -35,11 +35,12 @@ const config: Config = {
         helvetica: ["Helvetica Neue", "sans serif"],
       },
       backgroundImage: {
-        'light': "linear-gradient(90deg, hsla(0, 0%, 100%, 0), #fff)"
+        light: "linear-gradient(90deg, hsla(0, 0%, 100%, 0), #fff)",
       },
       boxShadow: {
-        "100": "0 12px 18px rgba(0, 0, 0, .14)"
-      }
+        "100": "0 12px 18px rgba(0, 0, 0, .14)",
+        dropdown: "0 12px 18px rgba(0,0,0,.14)",
+      },
     },
   },
   plugins: [],
