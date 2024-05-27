@@ -2,32 +2,27 @@
 import React, { useRef, useState } from "react";
 import { Transition } from "@headlessui/react";
 
-const times = [
+const sortings = [
   {
-    text: "1 minute",
-    value: 1,
+    id: 1,
+    text: "Recommended",
+    value: "recommended",
   },
   {
-    text: "2 minutes",
-    value: 2,
+    id: 2,
+    text: "Best selling",
+    value: "best-selling",
   },
   {
-    text: "5 minutes",
-    value: 5,
-  },
-  {
-    text: "10 minutes",
-    value: 10,
-  },
-  {
-    text: "15 minutes",
-    value: 15,
+    id: 3,
+    text: "Newest arrivals",
+    value: "newest-arrivals",
   },
 ];
 
-const ShowingTimeDropdown = () => {
+const SortBy = () => {
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState(times[0]);
+  const [selected, setSelected] = useState(sortings[0]);
   return (
     <div className="relative">
       <button
@@ -53,36 +48,32 @@ const ShowingTimeDropdown = () => {
         leave="transition ease-in duration-200"
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-2"
-        className="w-64 shrink-0 bg-white border border-100 rounded-lg shadow-lg overflow-hidden absolute left-0 mt-2 p-2">
+        className="w-64 shrink-0 bg-white border border-100 rounded-lg shadow-lg overflow-hidden absolute right-0 mt-2 p-2">
         <div className="pb-3">
-          {times.map((time) => (
+          {sortings.map((item) => (
             <button
               onClick={() => {
-                setSelected(time);
+                setSelected(item);
                 setOpen(false);
               }}
               type="button"
-              key={time.value}
+              key={item.id}
               className="w-full flex items-center hover:bg-gray-100/50 rounded-lg space-x-3 p-3">
               <svg
-                className={selected.value == time.value ? "opacity-100" : "opacity-0"}
+                className={selected.value == item.value ? "opacity-100" : "opacity-0"}
                 width="11"
                 height="9"
                 viewBox="0 0 11 9"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M3.64489 8.10164L0.158292 4.61504C-0.0511769 4.40557 -0.0511769 4.06594 0.158292 3.85645L0.916858 3.09786C1.12633 2.88837 1.46598 2.88837 1.67545 3.09786L4.02419 5.44658L9.05493 0.41586C9.2644 0.206391 9.60405 0.206391 9.81352 0.41586L10.5721 1.17445C10.7816 1.38392 10.7816 1.72355 10.5721 1.93303L4.40348 8.10166C4.19399 8.31113 3.85436 8.31113 3.64489 8.10164V8.10164Z"></path>
               </svg>
-              <span>{time.text}</span>
+              <span>{item.text}</span>
             </button>
           ))}
-        </div>
-        <div className="text-[13px] text-gray-400 border-t border-gray-100 mx-2 p-2">
-          <p>Need a different scope?</p>
-          <p>Contact sellers to get a quote.</p>
         </div>
       </Transition>
     </div>
   );
 };
 
-export default ShowingTimeDropdown;
+export default SortBy;
