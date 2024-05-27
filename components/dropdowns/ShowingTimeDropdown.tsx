@@ -53,7 +53,7 @@ const ShowingTimeDropdown = () => {
         leave="transition ease-in duration-200"
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-2"
-        className="w-64 shrink-0 bg-white border border-100 rounded-lg shadow-lg overflow-hidden absolute left-0 mt-2 p-2">
+        className="w-64 shrink-0 bg-white border border-100 rounded-lg shadow-lg overflow-hidden absolute left-0 mt-2 p-2 z-[999]">
         <div className="pb-3">
           {times.map((time) => (
             <button
