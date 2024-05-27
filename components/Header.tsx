@@ -1,55 +1,138 @@
-'use client'
-import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react'
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { FormEvent } from 'react'
+"use client";
+import React, { FormEvent } from "react";
+import { Menu, MenuButton, MenuItem, MenuItems, Transition } from "@headlessui/react";
+import Image from "next/image";
+import Link from "next/link";
+
+const profileLinks = [
+  {
+    title: "Profile",
+    links: [
+      {
+        name: "Profile",
+        link: "#",
+      },
+      {
+        name: "Dashboard",
+        link: "#",
+      },
+      {
+        name: "Post a request",
+        link: "#",
+      },
+      {
+        name: "Refere a friend",
+        link: "#",
+      },
+    ],
+  },
+  {
+    title: "Settings",
+    links: [
+      {
+        name: "Settings",
+        link: "#",
+      },
+      {
+        name: "Billing and payments",
+        link: "#",
+      },
+    ],
+  },
+];
 
 const Header = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log(e);
-  }
+    e.preventDefault();
+  };
   return (
-    <header className='border-b border-brand-gray-light py-4'>
-      <div className='flex items-center justify-between max-w-8xl mx-auto px-4 lg:px-8 gap-4 lg:gap-8'>
-        <div className='flex items-center gap-8 w-full flex-1'>
-          <button className='md:hidden'>
-            <svg xmlns="http://www.w3.org/2000/svg" width={23} height={19} viewBox="0 0 23 19"><rect y={16} width={23} height={3} rx="1.5" fill="#555" /><rect width={23} height={3} rx="1.5" fill="#555" /><rect y={8} width={23} height={3} rx="1.5" fill="#555" /></svg>
+    <header className="border-b border-brand-gray-light py-4">
+      <div className="flex items-center justify-between max-w-8xl mx-auto px-4 lg:px-8 gap-4 lg:gap-8">
+        <div className="flex items-center gap-8 w-full flex-1">
+          <button className="md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width={23} height={19} viewBox="0 0 23 19">
+              <rect y={16} width={23} height={3} rx="1.5" fill="#555" />
+              <rect width={23} height={3} rx="1.5" fill="#555" />
+              <rect y={8} width={23} height={3} rx="1.5" fill="#555" />
+            </svg>
           </button>
           <Link href="#">
-            <svg width="89" height="27" viewBox="0 0 89 27" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="#404145"><path d="m81.6 13.1h-3.1c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-13.4h-2.5c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-18.4h6v2.8c1-2.2 2.3-2.8 4.3-2.8h7.3v2.8c1-2.2 2.3-2.8 4.3-2.8h2zm-25.2 5.6h-12.4c.3 2.1 1.6 3.2 3.7 3.2 1.6 0 2.7-.7 3.1-1.8l5.3 1.5c-1.3 3.2-4.5 5.1-8.4 5.1-6.5 0-9.5-5.1-9.5-9.5 0-4.3 2.6-9.4 9.1-9.4 6.9 0 9.2 5.2 9.2 9.1 0 .9 0 1.4-.1 1.8zm-5.7-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3 .8-3.4 3zm-22.9 11.3h5.2l6.6-18.3h-6l-3.2 10.7-3.2-10.8h-6zm-24.4 0h5.9v-13.4h5.7v13.4h5.9v-18.4h-11.6v-1.1c0-1.2.9-2 2.2-2h3.5v-5h-4.4c-4.3 0-7.2 2.7-7.2 6.6v1.5h-3.4v5h3.4z"></path></g><g fill="#1dbf73"><path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path></g></svg>
+            <svg width="89" height="27" viewBox="0 0 89 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g fill="#404145">
+                <path d="m81.6 13.1h-3.1c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-13.4h-2.5c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-18.4h6v2.8c1-2.2 2.3-2.8 4.3-2.8h7.3v2.8c1-2.2 2.3-2.8 4.3-2.8h2zm-25.2 5.6h-12.4c.3 2.1 1.6 3.2 3.7 3.2 1.6 0 2.7-.7 3.1-1.8l5.3 1.5c-1.3 3.2-4.5 5.1-8.4 5.1-6.5 0-9.5-5.1-9.5-9.5 0-4.3 2.6-9.4 9.1-9.4 6.9 0 9.2 5.2 9.2 9.1 0 .9 0 1.4-.1 1.8zm-5.7-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3 .8-3.4 3zm-22.9 11.3h5.2l6.6-18.3h-6l-3.2 10.7-3.2-10.8h-6zm-24.4 0h5.9v-13.4h5.7v13.4h5.9v-18.4h-11.6v-1.1c0-1.2.9-2 2.2-2h3.5v-5h-4.4c-4.3 0-7.2 2.7-7.2 6.6v1.5h-3.4v5h3.4z"></path>
+              </g>
+              <g fill="#1dbf73">
+                <path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path>
+              </g>
+            </svg>
           </Link>
-          <form className='hidden md:flex items-center h-[42px] max-w-xl w-full flex-1' onSubmit={handleSubmit} >
-            <div className='relative border border-brand-black rounded-l-md overflow-hidden w-full h-full'>
-              <input className='absolute left-0 w-full h-full px-4 outline-none' type="text" placeholder='What service are you looking for today?' />
+          <form className="hidden md:flex items-center h-[42px] max-w-xl w-full flex-1" onSubmit={handleSubmit}>
+            <div className="relative border border-brand-black rounded-l-md overflow-hidden w-full h-full">
+              <input
+                className="absolute left-0 w-full h-full px-4 outline-none"
+                type="text"
+                placeholder="What service are you looking for today?"
+              />
             </div>
-            <button className=' bg-brand-black-100 h-full px-4 py-2 border border-brand-black-100 rounded-r-md'>
-              <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="m15.89 14.653-3.793-3.794a.37.37 0 0 0-.266-.109h-.412A6.499 6.499 0 0 0 6.5 0C2.91 0 0 2.91 0 6.5a6.499 6.499 0 0 0 10.75 4.919v.412c0 .1.04.194.11.266l3.793 3.794a.375.375 0 0 0 .531 0l.707-.707a.375.375 0 0 0 0-.53ZM6.5 11.5c-2.763 0-5-2.238-5-5 0-2.763 2.237-5 5-5 2.762 0 5 2.237 5 5 0 2.762-2.238 5-5 5Z"></path></svg>
+            <button className=" bg-brand-black-100 h-full px-4 py-2 border border-brand-black-100 rounded-r-md">
+              <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="white">
+                <path d="m15.89 14.653-3.793-3.794a.37.37 0 0 0-.266-.109h-.412A6.499 6.499 0 0 0 6.5 0C2.91 0 0 2.91 0 6.5a6.499 6.499 0 0 0 10.75 4.919v.412c0 .1.04.194.11.266l3.793 3.794a.375.375 0 0 0 .531 0l.707-.707a.375.375 0 0 0 0-.53ZM6.5 11.5c-2.763 0-5-2.238-5-5 0-2.763 2.237-5 5-5 2.762 0 5 2.237 5 5 0 2.762-2.238 5-5 5Z"></path>
+              </svg>
             </button>
           </form>
         </div>
 
-        <nav className='flex float-end items-center gap-6'>
-          <Link className='group' href="#" >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 group-hover:stroke-brand-green">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+        <nav className="flex float-end items-center gap-6">
+          <Link className="group" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6 group-hover:stroke-brand-green">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+              />
             </svg>
           </Link>
-          <Link className='group' href="#" >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 group-hover:stroke-brand-green">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+          <Link className="group" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6 group-hover:stroke-brand-green">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+              />
             </svg>
           </Link>
-          <Link className='group' href="#" >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 group-hover:stroke-brand-green">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+          <Link className="group" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6 group-hover:stroke-brand-green">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+              />
             </svg>
           </Link>
           <Menu>
             {({ open }) => (
               <>
                 <MenuButton className="relative w-10 h-10 rounded-full overflow-hidden">
-                  <Image className='absolute inset-0 size-full' src='/user.jpg' fill alt='' />
+                  <Image className="absolute inset-0 size-full" src="/user.jpg" fill alt="" />
                 </MenuButton>
                 <Transition
                   enter="transition ease-out duration-75"
@@ -57,21 +140,23 @@ const Header = () => {
                   enterTo="opacity-100 scale-100"
                   leave="transition ease-in duration-100"
                   leaveFrom="opacity-100 scale-100"
-                  leaveTo="opacity-0 scale-95"
-                >
-                  <MenuItems className="flex flex-col bg-white space-y-2 min-w-72 z-50 shadow-100 border border-brand-gray-dark mt-2 rounded-lg py-2 px-4" anchor="bottom end">
-                    <MenuItem>
-                      <Link className='text-brand-gray-dark w-full font-semibold py-2 px-4 hover:bg-brand-slate-100 rounded-md' href="#">Profile</Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link className='text-brand-gray-dark w-full font-semibold py-2 px-4 hover:bg-brand-slate-100 rounded-md' href="#">Refer a friend</Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link className='text-brand-gray-dark w-full font-semibold py-2 px-4 hover:bg-brand-slate-100 rounded-md' href="#">Settings</Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link className='text-brand-gray-dark w-full font-semibold py-2 px-4 hover:bg-brand-slate-100 rounded-md' href="#">Billing and payments</Link>
-                    </MenuItem>
+                  leaveTo="opacity-0 scale-95">
+                  <MenuItems
+                    className="relative bg-white w-52 border border-brand-black-200 divide-y divide-brand-gray-light shadow-profile-dropdown rounded overflow-visible z-50 mt-6 px-4"
+                    anchor="bottom end">
+                    {/* border-[10px] border-t-0 border-transparent  border-b-black/25*/}
+                    <div className="size-0 absolute -top-2.5 right-4 border-[10px] border-t-0 border-transparent  border-b-black/25"></div>
+                    {profileLinks.map((links, idx) => (
+                      <div key={idx} className="block py-2">
+                        {links.links.map((link, idx) => (
+                          <MenuItem key={idx}>
+                            <Link className="block w-full text-brand-gray-dark hover:text-green-600 py-1" href="#">
+                              {link.name}
+                            </Link>
+                          </MenuItem>
+                        ))}
+                      </div>
+                    ))}
                   </MenuItems>
                 </Transition>
               </>
@@ -148,10 +233,9 @@ const Header = () => {
             Join
           </Link>
         </nav> */}
-
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

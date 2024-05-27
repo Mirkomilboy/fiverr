@@ -40,6 +40,7 @@ const config: Config = {
       boxShadow: {
         "100": "0 12px 18px rgba(0, 0, 0, .14)",
         dropdown: "0 12px 18px rgba(0,0,0,.14)",
+        "profile-dropdown": "0 0 5px 1px rgba(0,0,0,.05)",
       },
     },
   },

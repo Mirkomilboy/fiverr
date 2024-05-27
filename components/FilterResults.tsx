@@ -1,5 +1,4 @@
 "use client";
-import { Menu, MenuButton, MenuItem, MenuItems, Transition } from "@headlessui/react";
 import React from "react";
 import ShowingTimeDropdown from "./dropdowns/ShowingTimeDropdown";
 import SortBy from "./dropdowns/SortBy";
