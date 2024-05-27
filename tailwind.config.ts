@@ -36,6 +36,7 @@ const config: Config = {
       },
       backgroundImage: {
         light: "linear-gradient(90deg, hsla(0, 0%, 100%, 0), #fff)",
+        "card-bottom": "linear-gradient(0deg, rgba(0, 0, 0, .3), hsla(0, 0%, 100%, 0))",
       },
       boxShadow: {
         "100": "0 12px 18px rgba(0, 0, 0, .14)",

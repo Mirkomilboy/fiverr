@@ -144,7 +144,6 @@ const Header = () => {
                   <MenuItems
                     className="relative bg-white w-52 border border-brand-black-200 divide-y divide-brand-gray-light shadow-profile-dropdown rounded overflow-visible z-50 mt-6 px-4"
                     anchor="bottom end">
-                    {/* border-[10px] border-t-0 border-transparent  border-b-black/25*/}
                     <div className="size-0 absolute -top-2.5 right-4 border-[10px] border-t-0 border-transparent  border-b-black/25"></div>
                     {profileLinks.map((links, idx) => (
                       <div key={idx} className="block py-2">

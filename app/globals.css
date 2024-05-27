@@ -8,7 +8,7 @@ body {
 
 .btn.swiper-button-disabled,
 .btn.swiper-button-disabled {
-  @apply opacity-0
+  @apply opacity-0;
 }
 
 @font-face {
@@ -54,4 +54,16 @@ body {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+.swiper-pagination {
+  @apply flex items-center justify-center py-2;
+}
+
+.swiper-pagination-bullet {
+  @apply !bg-white !opacity-60;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply !opacity-100;
 }
