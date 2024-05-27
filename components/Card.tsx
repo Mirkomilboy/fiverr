@@ -67,7 +67,7 @@ const Card = ({ id, card }: props) => {
           <Status status={card.status} />
         </div>
         <Link href={"#"}>
-          <p className="line-clamp-2 text-brand-black h-12">{card.text}</p>
+          <p className="line-clamp-2 text-brand-black h-12 hover:underline underline-offset-2">{card.text}</p>
         </Link>
         <div className="flex items-center gap-1 mt-3">
           <span>
