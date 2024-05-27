@@ -15,11 +15,7 @@ export const FilterSection = () => {
     if (open == idx) {
       setOpen(0);
     } else {
-      if (idx !== undefined) {
-        setOpen(idx);
-      } else {
-        setOpen(0);
-      }
+      setOpen(idx);
     }
   };
 
