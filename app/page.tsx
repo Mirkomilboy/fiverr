@@ -9,9 +9,9 @@ export default function Home() {
       <Header />
       <main>
         <HeadSection />
-        {/* <SelectType /> */}
+        <SelectType />
         <FilterSection />
-        {/* <FilterResults /> */}
+        <FilterResults />
         {/* <Resault /> */}
         <div className="h-screen"></div>
         <div className="h-screen"></div>
