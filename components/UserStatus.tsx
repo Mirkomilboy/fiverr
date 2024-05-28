@@ -1,13 +1,13 @@
-import { cardDataI, statusType } from "@/lib/types";
+import { statusType } from "@/lib/types";
 import React from "react";
 
-const Status = ({ status }: { status: statusType }) => {
+const UserStatus = ({ status }: { status: statusType }) => {
   switch (status) {
     case "new":
       return <></>;
     case "one":
       return (
-        <div className="relative flex items-center gap-1">
+        <div className="relative flex items-center gap-1 group/level-tooltip">
           <p>Level 1</p>
           <div className="flex items-center gap-0.5">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width={10} height={10} fill="currentColor">
@@ -20,11 +20,12 @@ const Status = ({ status }: { status: statusType }) => {
               <path d="M4.839.22a.2.2 0 0 1 .322 0l1.942 2.636a.2.2 0 0 0 .043.043L9.782 4.84a.2.2 0 0 1 0 .322L7.146 7.105a.2.2 0 0 0-.043.043L5.161 9.784a.2.2 0 0 1-.322 0L2.897 7.148a.2.2 0 0 0-.043-.043L.218 5.163a.2.2 0 0 1 0-.322l2.636-1.942a.2.2 0 0 0 .043-.043L4.839.221Z" />
             </svg>
           </div>
+          <Tooltip text="Level 1 Lorem ipsum dolor, sit amet consectetur adipisicing elit." />
         </div>
       );
     case "two":
       return (
-        <div className="relative flex items-center gap-1">
+        <div className="relative flex items-center gap-1 group/level-tooltip">
           <p>Level 2</p>
           <div className="flex items-center gap-0.5">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width={10} height={10} fill="currentColor">
@@ -37,11 +38,12 @@ const Status = ({ status }: { status: statusType }) => {
               <path d="M4.839.22a.2.2 0 0 1 .322 0l1.942 2.636a.2.2 0 0 0 .043.043L9.782 4.84a.2.2 0 0 1 0 .322L7.146 7.105a.2.2 0 0 0-.043.043L5.161 9.784a.2.2 0 0 1-.322 0L2.897 7.148a.2.2 0 0 0-.043-.043L.218 5.163a.2.2 0 0 1 0-.322l2.636-1.942a.2.2 0 0 0 .043-.043L4.839.221Z" />
             </svg>
           </div>
+          <Tooltip text="Level 2 Lorem ipsum dolor, sit amet consectetur adipisicing elit." />
         </div>
       );
     case "three":
       return (
-        <div className="relative flex items-center gap-1 px-1.5 rounded bg-[#ffe0b3] text-[#804317]">
+        <div className="relative flex items-center gap-1 px-1.5 rounded bg-[#ffe0b3] text-[#804317] group/level-tooltip ">
           <p>Top Rated</p>
           <div className="flex items-center gap-0.5">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10" fill="currentColor">
@@ -54,11 +56,12 @@ const Status = ({ status }: { status: statusType }) => {
               <path d="M4.839.22a.2.2 0 0 1 .322 0l1.942 2.636a.2.2 0 0 0 .043.043L9.782 4.84a.2.2 0 0 1 0 .322L7.146 7.105a.2.2 0 0 0-.043.043L5.161 9.784a.2.2 0 0 1-.322 0L2.897 7.148a.2.2 0 0 0-.043-.043L.218 5.163a.2.2 0 0 1 0-.322l2.636-1.942a.2.2 0 0 0 .043-.043L4.839.221Z"></path>
             </svg>
           </div>
+          <Tooltip text="Level Top Rated Lorem ipsum dolor, sit amet consectetur adipisicing elit." />
         </div>
       );
     case "pro":
       return (
-        <div className="relative flex items-center gap-1 bg-[#2e25ad] rounded px-1.5 text-white">
+        <div className="relative flex items-center gap-1 bg-[#2e25ad] rounded px-1.5 text-white group/level-tooltip ">
           <svg width={12} height={12} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
             <path
               fillRule="evenodd"
@@ -67,6 +70,8 @@ const Status = ({ status }: { status: statusType }) => {
             />
           </svg>
           <p>Pro</p>
+
+          <Tooltip text="Level Pro Lorem ipsum dolor, sit amet consectetur adipisicing elit." />
         </div>
       );
     case "choose":
@@ -76,4 +81,11 @@ const Status = ({ status }: { status: statusType }) => {
   }
 };
 
-export default Status;
+const Tooltip = ({ text }: { text: string }) => (
+  <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-64 bg-[#40454e] text-white text-sm/6 rounded-lg z-[9999] hidden group-hover/level-tooltip:block p-3">
+    <p>{text}</p>
+    <span className="size-3.5 bg-[#40454e] absolute left-1/2 -translate-x-1/2 -bottom-1  rotate-45"></span>
+  </div>
+);
+
+export default UserStatus;

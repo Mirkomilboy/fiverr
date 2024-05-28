@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { CardSlider } from "@/lib/data";
 import { cardDataI } from "@/lib/types";
-import Status from "./common/Status";
+import UserStatus from "./UserStatus";
 
 interface props {
   card: cardDataI;
@@ -22,7 +22,7 @@ const Card = ({ id, card }: props) => {
   let prev = "prev" + id;
 
   return (
-    <div className="w-full bg-transparent">
+    <div className="w-full group">
       <div className="relative after:absolute after:h-12 after:w-full after:left-0 after:bottom-0 after:bg-card-bottom group h-[190px] w-full rounded-lg overflow-hidden cursor-pointer">
         <Swiper
           modules={[Navigation, Pagination]}
@@ -60,14 +60,15 @@ const Card = ({ id, card }: props) => {
               <Image fill className="absolute size-full object-cover" src="/user.jpg" alt="" />
             </div>
             <p className="flex items-center gap-1 text-brand-black-100 font-bold text-sm">
-              <span className="text-brand-black-300 font-normal">Ad by</span>
-              {card.name}
+              <Link href="#" className="inline-block hover:underline underline-offset-2">
+                {card.name}
+              </Link>
             </p>
           </div>
-          <Status status={card.status} />
+          <UserStatus status={card.status} />
         </div>
-        <Link href={"#"}>
-          <p className="line-clamp-2 text-brand-black h-12 hover:underline underline-offset-2">{card.text}</p>
+        <Link href={"#"} className="block line-clamp-2 text-brand-black h-12 group-hover:underline underline-offset-2">
+          {card.text}
         </Link>
         <div className="flex items-center gap-1 mt-3">
           <span>
