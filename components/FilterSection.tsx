@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import DropdownSelect from "./DropdownSelect";
+import DropdownSelect from "./dropdowns/DropdownSelect";
 import { selectOptions, checkOptions } from "@/lib/data";
 import SwitchToggle from "./SwitchToggle";
-import DropdownRadio from "./DropdownRadio";
+import DropdownRadio from "./dropdowns/DropdownRadio";
 
 export const FilterSection = () => {
   const [shadow, setShadow] = useState(false);

@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import { Transition } from "@headlessui/react";
 import { useOutsideClick } from "@/hooks/useClickOutside";
-import CustomRadioBox from "./CustomRadioBox";
+import CustomRadioBox from "../CustomRadioBox";
 
 const DropdownRadio = ({ id, title, data, handleOpenDropdown, open }: any) => {
   const dropdownRef = useRef(null);

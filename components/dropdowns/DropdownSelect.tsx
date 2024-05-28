@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { Transition } from "@headlessui/react";
-import SelectOptionsContent from "./SelecOptionsContent";
+import SelectOptionsContent from "../SelecOptionsContent";
 import { useOutsideClick } from "@/hooks/useClickOutside";
 
 const DropdownSelect = ({ id, title, data, handleOpenDropdown, open }: any) => {

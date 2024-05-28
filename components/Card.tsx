@@ -67,7 +67,9 @@ const Card = ({ id, card }: props) => {
           </div>
           <UserStatus status={card.status} />
         </div>
-        <Link href={"#"} className="block line-clamp-2 text-brand-black h-12 group-hover:underline underline-offset-2">
+        <Link
+          href={"#"}
+          className="block line-clamp-2 text-brand-black h-12 group-hover:underline underline-offset-2 mt-1">
           {card.text}
         </Link>
         <div className="flex items-center gap-1 mt-3">
